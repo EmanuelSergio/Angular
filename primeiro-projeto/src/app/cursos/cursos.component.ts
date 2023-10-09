@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class CursosComponent {
 
+  nomePortal: any; //any = aceita qualquer tipo de valor, string, number...
+
+  constructor(){
+    this.nomePortal = 'https://loiane.training/'
+  }
+
+
+
+
 }
+
