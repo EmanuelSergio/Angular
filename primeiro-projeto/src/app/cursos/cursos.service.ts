@@ -8,7 +8,7 @@ export class CursosService {
   constructor() { }
 
   getCursos(){
-    return ['JAVA', 'NEXT.JS', 'TYPESCRIPT', 'OMG BROddd']
+    return ['JAVA', 'NEXT.JS', 'TYPESCRIPT', 'OMG BRO']
   }
 
 
