@@ -8,6 +8,8 @@
     <p>o curso Angular é bom: {{getCurtirCurso() && cursoAngular }}</p>
   </article>
 
+  <!--PROPERTY BINDING-->
+
   <article>
     <h3>property Binding</h3>
     <img src="{{urlImagen}}"> <!--forma de pegar uma imagen do typescript-->
@@ -16,6 +18,8 @@
   </article>
 
   <hr>
+
+  <!--STYLE BINDING-->
 
   <article>
     <h3>Class e Style Binding</h3>
@@ -40,10 +44,76 @@
       <div class="alert" role="alert" [class.alert-warning] = "classe.value == 'alert-warning'">Alerta</div>
       <div class="alert" role="alert" [class.alert-danger] = "classe.value == 'alert-danger'">Erro</div>
 
-
+      <div class="alert alert-danger" role="alert"  [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">Esta mensagem só aparece quando der erro</div>
 
     </div>
   </article>
+
+ <article>
+
+    <h3>Event Binding</h3>
+
+    <div>
+
+      <button (click)="botaoClicado()" class="btn btn-primary">Acessa ai</button>
+
+      <br><br>
+
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor(campoImput.value)"
+      (blur)="salvarValor(campoImput.value)"
+      #campoImput/>
+
+
+
+      <p>O valor atual é: {{ valorAtual }}</p>
+      <p>O valor salvo é: {{ valorSalvo }}</p>
+
+      <br>
+
+    </div>
+
+    <span (mouseover)="onMouseOverOut()"
+    (mouseout)="onMouseOverOut()"
+    [class.highlight]="isMouseOver"
+    >Passe o mouse sobre mim</span>
+
+ </article>
+
+
+</section>
+
+<br><br><br><br>
+
+<section class="two-way-binding">
+    <article>
+        <h3>Two-way data binding</h3>
+        <div>
+
+          <input type="text"
+            [value]="nome"
+            (input)="nome = valor.value"
+            #valor
+          />
+
+
+         <!--<input type="text"
+            [ngModel]="nome"
+            (ngModelChange)="nome = $event"
+            #valor
+          />-->
+
+
+
+          <p>Você digitou: {{ nome }}</p>
+        </div>
+
+    </article>
+
+
+
+
 
 
 </section>
