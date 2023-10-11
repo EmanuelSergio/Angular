@@ -1,0 +1,29 @@
+<section>
+
+  <article>
+    <h3>Interpolation / Interpolação</h3>
+    <p>String renderizada com Interpolação: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{1 + 1}}</p>
+    <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>         <!--forma de pegar uma variavel string-->
+    <p>o curso Angular é bom: {{getCurtirCurso() && cursoAngular }}</p>
+  </article>
+
+  <article>
+    <h3>property Binding</h3>
+    <img src="{{urlImagen}}"> <!--forma de pegar uma imagen do typescript-->
+    <img [src]="urlImagen">
+
+  </article>
+
+  <hr>
+
+  <article>
+
+    <h3>Class e Style Binding</h3>
+
+  </article>
+
+
+</section>
+
+
