@@ -16,6 +16,14 @@ isMouseOver:boolean=false
 
 nome:any='abc'
 
+pessoa = {
+
+  nome:"Gustavo Lima",
+  idade:20,
+  endereco:""
+
+}
+
 onMouseOverOut(){
   this.isMouseOver = !this.isMouseOver
 }
