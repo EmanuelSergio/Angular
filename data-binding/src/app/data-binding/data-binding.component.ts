@@ -16,6 +16,8 @@ isMouseOver:boolean=false
 
 nome:any='abc'
 
+nomeDoCurso:string='Angular';
+
 pessoa = {
 
   nome:"Gustavo Lima",
@@ -46,6 +48,13 @@ getValor(){
 
 getCurtirCurso(){
   return true
+}
+
+onMudouValor(evento:any){
+
+console.log(evento.novoValor);
+
+
 }
 
 }
